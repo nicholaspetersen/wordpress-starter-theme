@@ -54,12 +54,35 @@ add_filter('body_class','my_body_classes');
 
 // Add post thumbnail functionality to new post page.
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'custom-size', 375, 375, true ); // Hard Crop Mode
+
+function clean_header(){
+	wp_deregister_script( 'comment-reply' );
+         }
+add_action('init','clean_header');
+
+//Remove jquery
+add_action( 'wp_enqueue_scripts', 'remove_jquery' );
+function remove_jquery() {
+		wp_deregister_script('jquery'); 
+		wp_register_script('jquery', '', '', '', true);
+}
 
 // Add custom image for the Login page.
-function custom_admin_logo() {
-echo '		<style type="text/css">#header-logo { background-image: url('.get_bloginfo('template_directory').'images/adminlogo.png) !important; }</style>';
-}
-add_action('admin_head', 'custom_admin_logo');
+function my_login_logo() { ?>
+    <style type="text/css">
+        body.login div#login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/login-logo.png);
+            padding-bottom: 30px;
+            margin: 0 auto;
+            width: 200px;
+            background-size: 200px 105px;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
 
 
 ?>
+
+

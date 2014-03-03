@@ -14,10 +14,7 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
 	
-	<script src="<?php bloginfo('template_directory'); ?>/js/libs/modernizr-2.5.3.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/respond.min.js"></script>
-	<script src="<?php bloginfo('template_directory'); ?>/js/libs/prefixfree.min.js"></script>
-	
+	<script src="<?php bloginfo('template_directory'); ?>/js/libs/modernizr-2.6.2.min.js"></script>
 	<!--[if lt IE 9]>
 	<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 	<![endif]-->

@@ -1,10 +1,12 @@
 /*
-Theme Name: RC
+Theme Name: Less Is More
 Author: Nicholas Petersen
-Author URI: http://rocketcarcreative.com
+Author URI: http://less.is
 */
-@import url(reset.css);
+
+@import url(reset.less);
 @import url(grid.less);
+@import url(classes.less);
 
 /*---GRID---*/
 @columns: 12;
@@ -17,22 +19,86 @@ Author URI: http://rocketcarcreative.com
 	box-sizing: border-box;
 }
 
-/*---COLOR---*/
-@black: #000000;
-@white: #ffffff;
-@teal: #478c73;
-@orange: #f2622b;
-
-html, body{
+html, 
+body {
 	width: 100%;
 	height: 100%;
 }
-/* FONTS *
+
+@-o-viewport {
+	width: device-width
+}
+
+@-ms-viewport {
+	width: device-width
+}
+
+@viewport {
+	width: device-width
+}
+
+img,
+audio,
+video,
+canvas{
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+/* COLOR *
 -----------------------------------------------*/
+@black: #000000;
+@white: #ffffff;
+
+
+/* TYPOGRAPHY *
+-----------------------------------------------*/
+.sans {
+
+}
+
+.serif {
+
+}
+
+/* ELEMENTS *
+-----------------------------------------------*/
+::selection {
+	background: ;
+}
+
+::-moz-selection {
+	background: ;
+}
+
+.transition(@time: 320ms){
+	transition: all @time ease;
+	-moz-transition: all @time ease; /* Firefox 4 */
+	-webkit-transition: all @time ease; /* Safari and Chrome */
+	-o-transition: all @time ease; /* Opera */
+}
+
+.border-radius(@radius: 3px) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius; /* future proofing */
+	-khtml-border-radius: @radius; /* for old Konqueror browsers */
+}
 
 
 /* LAYOUT *
 -----------------------------------------------*/
+@small: ~"screen and (min-width: 20em)";
+@medium: ~"screen and (min-width: 38em)";
+@large: ~"screen and (min-width: 48em)";
+@extra-large: ~"screen and (min-width: 58em)";
+@max: ~"screen and (min-width: 65em)";
+@retina: ~"screen and (-webkit-min-device-pixel-ratio: 2)";
 
 
 /* NAVIGATION *
@@ -45,23 +111,3 @@ html, body{
 
 /* FOOTER *
 -----------------------------------------------*/
-
-/*---MOBILE (Portrait) 320px---*/
-@media screen and (min-width: 20em) {
-
-}
-
-/*---MOBILE (Landscape) 480px---*/
-@media screen and (min-width: 30em) {
-
-}
-
-/*---IPAD (Portrait) 592px---*/
-@media screen and (min-width: 37em) {
-
-}
-
-/*---DESKTOP 784px---*/
-@media screen and (min-width: 49em) {
-
-}
