@@ -1,11 +1,17 @@
 <?php get_header(); ?>
-<div class="content">
-	<div id="post-0" class="post error404 not-found">
-		<h1 class="entry-title">Not Found</h1>
-		<div class="entry-content">
-			<p>Sorry, nothing here.</p>
-		</div>
+<main role="main" class="main wrapper">
+	<div class="content">
+		<article id="post-0" class="post error404 not-found">
+			<header class="article-header">
+				<h1 class="entry-title">Not Found</h1>
+			</header>
+			<section class="entry-content">
+				<p>Sorry, nothing here.</p>
+			</section>
+			<footer class="article-footer">
+				
+			</footer>
+		</article>
 	</div>
-</div>
-<?php get_sidebar(); ?>
+</main>
 <?php get_footer(); ?>
