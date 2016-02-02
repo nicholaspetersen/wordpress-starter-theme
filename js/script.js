@@ -1,1 +1,2 @@
-//@codekit-prepend "libs/jquery-1.10.1.min.js","libs/respond.js","libs.prefixfree.min.js";
+//@codekit-prepend "lib/jquery-1.12.0.js","lib/respond.js","lib/picturefill.js","lib/jquery.magnific-popup.js","lib/jquery.fitvids.js";
+

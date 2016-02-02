@@ -1,0 +1,97 @@
+/*BUTTONS *
+-----------------------------------------------*/
+
+
+.btn(@bg:@grey, @text:@white) {
+	display: inline-block;
+	min-width: 100px;
+	margin-bottom: 0.25em;
+	padding: 0.75em 1em;
+	background-color: @bg;
+	color: @text;
+	line-height: 1;
+	text-align: center;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	position: relative;
+	.transition(0.5s);
+	.border-radius(3px);
+
+	@media @medium {
+		min-width: 110px;
+	}
+	
+	&:hover, 
+	&:focus {
+		background-color: @bg/1.08;
+		color: @text;
+	}
+
+	&:active {
+		background-image: linear-gradient(to right bottom, fade(@bg, 0%),@bg);
+		background-image: none;
+		box-shadow: inset 0 -1px rgba(0, 0, 0, 0);
+	}
+
+	svg {
+		fill: @white;
+	}
+}
+
+.btn,
+button {
+	.btn();
+}
+
+.btn-white {
+	.btn(@white);
+	color: @black;
+
+	&:hover {
+		background: @white*1.2;
+	}
+}
+
+.btn-grey {
+	.btn(@grey);
+}
+
+.btn-grey-light {
+	.btn(@grey-light);
+}
+
+.btn-grey-lighter {
+	.btn(@grey-lighter, @grey);
+	box-shadow: none;
+}
+
+.btn-alt {
+	&:extend(.btn all);
+	.border-radius(25px);
+	text-transform: none;
+}
+
+.btn-border {
+	.btn();
+	background: none;
+	border: 2px solid @white;
+	color: @white;
+	box-shadow: none;
+	
+	&:hover {
+		background: @white;
+		border-color: @white;
+		color: @grey!important; //needed to override the ".bg-blue a{color:#ddf7f6}" style;
+	}
+}
+
+.btn-big {
+	font-size: 1.5em;
+}
+
+.btn-small {
+	&:extend(.btn);
+	padding: 1em;
+	font-size: 0.7em;
+}

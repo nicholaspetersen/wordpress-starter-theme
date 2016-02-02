@@ -1,0 +1,75 @@
+/*LAYOUT *
+-----------------------------------------------*/
+
+@small: ~"screen and (min-width: 20em)";
+@smallish: ~"screen and (min-width: 30em)";
+@medium: ~"screen and (min-width: 38em)";
+@large: ~"screen and (min-width: 55em)";
+@extra-large: ~"screen and (min-width: 60em)";
+@max: ~"screen and (min-width: 66em)";
+@1600: ~"screen and (min-width: 1600px)";
+@retina: ~"screen and (-webkit-min-device-pixel-ratio: 2)";
+@retina: ~"only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (   min--moz-device-pixel-ratio: 2),only screen and (     -o-min-device-pixel-ratio: 2/1),only screen and (        min-device-pixel-ratio: 2),only screen and (                min-resolution: 192dpi),only screen and (min-resolution: 2dppx) ";
+
+*{
+	box-sizing: border-box;
+}
+@-o-viewport{
+	width: device-width
+}
+@-ms-viewport{
+	width: device-width
+}
+@viewport{
+	width: device-width
+}
+
+html{
+	overflow-y: auto
+}
+
+html, 
+body {
+	width: 100%;
+	height: 100%;
+}
+
+img,
+audio,
+video,
+canvas{
+	max-width: 100%;
+	width: auto;
+	height: auto;
+}
+
+img {
+	//vertical-align: bottom;
+}
+
+.main {
+	margin-top: 58px!important;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 1350px;
+	margin: 0 auto;
+}
+
+.wrapper-small {
+	&:extend(.wrapper);
+	max-width: 1080px;
+}
+
+.padding-top {
+	padding-top: 70px;
+}
+
+.padding-bottom {
+	padding-bottom: 70px;
+}
+
+.hidden {
+	display: none;
+}
