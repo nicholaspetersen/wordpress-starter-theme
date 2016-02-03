@@ -38,22 +38,18 @@
 
 		.icon-bar-1 {
 			top: 6px;
-			-webkit-transform: rotate(45deg);
-			        transform: rotate(45deg);
-			
+			transform: rotate(45deg);
 		}
 
 		.icon-bar-2 {
 			top: -1px;
-			-webkit-transform: rotate(45deg);
-			        transform: rotate(45deg);
+			transform: rotate(45deg);
 			opacity: 0;
 		}
 
 		.icon-bar-3 {
 			bottom: 8px;
-			-webkit-transform: rotate(-45deg);
-			        transform: rotate(-45deg);
+			transform: rotate(-45deg);
 		}
 
 		&:after {
@@ -69,38 +65,16 @@
 	}
 }
 
-.site-header nav {
-	float: right;
-	.transition;
-	max-width: 350px;
-	text-align: right;
-	.cf;
-
-	@media @large {
-		background: none;
-		transform: none;
-		float: right;
-	}
-
-	&.active {
-		transform: translateX(0);
-	}
-}
-
 .primary-nav {
-	width: 100%;
-	margin-bottom: 1em;
+	float: right;
+	width: auto;
+	margin-bottom: 0;
 	font-size: 1em;
-	
+	text-align: right;
 	text-transform: uppercase;
 	.letter-spacing;
-
-	@media @large {
-		text-align: center;
-		position: relative;
-		float: left;
-		margin-bottom: 0;
-	}
+	.transition;
+	.cf;
 	
 	li {
 		display: block;
@@ -110,7 +84,6 @@
 		@media @large {
 			float: left;
 			display: inline;
-			//width: 50%;
 		}
 	}
 
@@ -138,15 +111,6 @@
 	}
 }
 
-.account-nav {
-	
-
-	@media @large {
-		float: right;
-		width: 35%;
-	}
-}
-
 body.nav-active {
   position: fixed;
   height: 100%;
@@ -157,11 +121,9 @@ body.nav-active {
 .main.active {
 	position: relative;
 	filter: blur(2px);
-	-webkit-filter: blur(2px);
 
 	@media @large {
 		filter: blur(0);
-		-webkit-filter: blur(0px);
 	}
 }
 
