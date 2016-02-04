@@ -28,6 +28,6 @@
 <header class="site-header">
 	<h1 class="logo"><a href="<?php echo home_url() ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></h1>
 	<nav role="navigation" class="primary-nav">
-		<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '' ) ); ?>
 	</nav>
 </header>
