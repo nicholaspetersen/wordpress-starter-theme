@@ -1,36 +1,61 @@
-//Normalize
-@import url('normalize.less');
+/*
+Theme Name: Less Is More
+*/
 
+//Normalize
+
+@import url('global/_normalize.less');
 
 //Layout
-@import url('_grid.less'); //Defines the semantic grid system
-@import url('_classes.less'); //Sets classes based on the semantic grid system (yes, I know...)
+@import url('global/_grid.less'); //Defines the semantic grid system
+//@import url('global/_classes.less'); //Sets classes based on the semantic grid system (yes, I know...)
+//@import url('_grid-flex.less');
 
 //Global
-@import url('global.less'); //Styles that apply globally
+@import url('global/global.less'); //Styles that apply globally
+@import url('global/_colors.less');
+@import url('global/_backgrounds.less');
+@import url('global/_typography.less');
+@import url('global/_media.less');
+//@import url('global/_tables.less');
 
-//Styles
-@import url('_colors.less');
-@import url('_backgrounds.less');
-@import url('_typography.less');
-@import url('_buttons.less');
-@import url('_forms.less');
-@import url('_header.less');
-@import url('_footer.less');
-@import url('_navigation.less');
-@import url('_media.less');
-@import url('_elements.less');
-@import url('_mixins.less');
+//Elements
+
+
+//Components
+@import url('components/_elements.less');
+@import url('components/_buttons.less');
+@import url('components/_forms.less');
+@import url('components/_navigation.less');
+@import url('components/_cards.less');
+@import url('components/_tables.less');
+
+//Mixins
+@import url('mixins/_mixins.less');
+
+
+
+//Sections
+@import url('sections/_header.less');
+@import url('sections/_footer.less');
+@import url('sections/_hero.less');
+@import url('sections/_media-text.less');
+//@import url('sections/article-header.less');
+//@import url('sections/article-content.less');
+//@import url('sections/resource-filter.less');
 
 
 //Page-specific
-@import url('page-home.less');
+@import url('pages/page-home.less');
 
+
+//Custom
 
 //Plugins
-@import url('magnific-popup.less');
+@import url('plugins/magnific-popup.less');
+//@import url('plugins/owl.carousel.less');
 
 //Style Guide
-@import url('prism.less');
-@import url('style-guide.less');
+//@import url('prism.less');
+//@import url('style-guide.less');
 

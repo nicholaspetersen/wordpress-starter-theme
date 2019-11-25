@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
-<main role="main" class="main wrapper cf">
-	<div class="content">
+<main role="main" class="main cf">
+    <div class="content wrapper--sm padding--md">
 		<h1 class="page-title"><?php _e( 'Category Archives for') ?> <span><?php single_cat_title() ?></span></h1>
 		<?php $categorydesc = category_description(); if ( !empty($categorydesc) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
 

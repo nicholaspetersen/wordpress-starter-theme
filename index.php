@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<main role="main" class="main wrapper cf">
-	<div class="content">
+<main role="main" class="main cf">
+    <div class="content wrapper--sm padding--md">
 		<?php while ( have_posts() ) : the_post() ?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
 			<header class="article-header">

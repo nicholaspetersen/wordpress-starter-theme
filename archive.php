@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
-<main role="main" class="main wrapper cf">
-	<div class="content">
-		<?php if ( is_day() ) : ?>
+<main role="main" class="main cf">
+	<div class="content wrapper--sm padding--md">
+	<?php if ( is_day() ) : ?>
 		<h1 class="page-title"><?php printf( __( 'Daily Archives: <span>%s</span>' ), get_the_time(get_option('date_format')) ) ?></h1>
 			<?php elseif ( is_month() ) : ?>
 		<h1 class="page-title"><?php printf( __( 'Monthly Archives: <span>%s</span>' ), get_the_time('F Y') ) ?></h1>

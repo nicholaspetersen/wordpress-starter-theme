@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
-<main role="main" class="main wrapper cf">
-	<div class="content">
+<main role="main" class="main cf">
+    <div class="content wrapper--sm padding--md">
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="article-header">
 				<h1 class="entry-title"><?php the_title(); ?></h1>

@@ -1,32 +1,35 @@
 /*HEADER *
 -----------------------------------------------*/
-.site-header {
-	position: fixed;
-	top: 0;
-	left: 0;
+.header {
 	width: 100%;
+	display: block;
+	position: relative;
 	z-index: 100;
-	box-shadow: 0 1px 8px rgba(0,0,0,.3);
+	box-shadow: 0 3px 20px rgba(0,0,0,.12);
 	background: @white;
+	.cf;
 
 	@media @large {
 		
 	}
 }
 
-h1.logo {
+.header--fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.header__logo {
 	width: 150px;
 	margin: 0 auto;
+	padding: 1em 1em;
 	font-size: 18px;
+	display: block;
+	border: none;
 
 	@media @large {
 		float: left;
 		width: 276px;
-	}
-
-	a {
-		display: block;
-		border: none;
-		padding: 20px 1em;
 	}
 }

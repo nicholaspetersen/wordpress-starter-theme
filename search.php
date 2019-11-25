@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-<main role="main" class="main wrapper cf">
-	<div class="content">
+<main role="main" class="main cf">
+    <div class="content wrapper--sm padding--md">
 		<?php if ( have_posts() ) : ?>
 		<h1 class="page-title"><?php _e( 'Search Results for '); ?><span><?php the_search_query(); ?></span></h1>
 		<?php while ( have_posts() ) : the_post() ?>

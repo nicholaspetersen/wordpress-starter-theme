@@ -1,0 +1,71 @@
+/*BACKGROUNDS *
+-----------------------------------------------*/
+
+[class*='bg--'] {
+	
+}
+
+.bg--black {
+	background: @black;
+	color: @white;
+}
+
+.bg--white {
+	background: @white;
+	color: @black;
+}
+
+.bg--grey {
+	background: @grey;
+	color: @white;
+}
+
+.bg--grey-light {
+	background: @grey-light;
+}
+
+.bg--grey-lighter {
+	background: @grey-lighter;
+}
+
+.bg--grey-dark {
+	background: @grey-dark;
+	color: @white;
+}
+
+/*ENVIRONMENTS *
+Determines if the background of the section is light or dark.
+-----------------------------------------------*/
+.light,
+.dark .light {
+	color: @black;
+
+	h1,h2,h3, h4,p,a {
+		color: @black;
+	}
+
+	a {
+		color: @black;
+	}
+
+	a:hover {
+		color: @black;
+	}
+}
+
+.dark,
+.light .dark {
+	color: @white;
+	
+	h1,h2,h3, h4,p,a {
+		color: @white;
+	}
+
+	a {
+		color: @white;
+	}
+
+	a:hover {
+		color: @white;
+	}
+}

@@ -7,26 +7,24 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title><?php wp_title(' | ', true, 'right'); ?><?php bloginfo('name'); ?></title>
-	<meta name="author" content="Less Is, http://less.is" />
-	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><?php wp_title(' | ', true, 'right'); ?><?php bloginfo('name'); ?></title>
+	<meta name="description" content="">
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
 
-	<meta property="og:title" content="<?php bloginfo('name'); ?>">
+	<meta property="og:title" content="<?php echo get_the_title(); ?>">
 	<meta property="og:type" content="company" />
 	<meta property="og:description" content="">
 	<meta property="og:image" content="<?php bloginfo('template_directory'); ?>/images/og-1200x630.jpg">
-	<meta property="og:url" content="<?php echo home_url(); ?>">
+	<meta property="og:url" content="<?php echo get_permalink( $post->ID ); ?>">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta property="og:site_name" content="<?php bloginfo('name'); ?>">
 	<meta name="twitter:image:alt" content="">
 
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/images/favicon.ico" />
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/style.css" />
 	
-	<script src="<?php bloginfo('template_directory'); ?>/js/libs/modernizr-2.6.2.min.js"></script>
 	<!--[if lt IE 9]>
 	<script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js"></script>
 	<![endif]-->
@@ -38,9 +36,9 @@
 <!--[if lt IE 7]>
 	<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
  <![endif]-->
-<header class="site-header">
-	<h1 class="logo"><a href="<?php echo home_url() ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></h1>
-	<nav role="navigation" class="primary-nav">
-		<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container' => '' ) ); ?>
+<header class="header">
+	<a href="<?php echo home_url() ?>/" class="header__logo" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a>
+	<nav role="navigation" class="">
+		<?php wp_nav_menu( array( 'theme_location' => 'header__nav', 'container' => '' ) ); ?>
 	</nav>
 </header>
